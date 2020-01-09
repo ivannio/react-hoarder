@@ -14,6 +14,8 @@ import Auth from '../components/pages/Auth/Auth';
 import Home from '../components/pages/Home/Home';
 import MyStuff from '../components/pages/My Stuff/MyStuff';
 import NewStuff from '../components/pages/New Stuff/NewStuff';
+import Edit from '../components/pages/Edit/Edit';
+import SingleStuff from '../components/pages/Single Stuff/SingleStuff';
 
 import './App.scss';
 
@@ -58,6 +60,8 @@ class App extends React.Component {
             <PrivateRoute path="/home" exact component={Home} authed={authed} />
             <PrivateRoute path="/stuff/new" exact component={NewStuff} authed={authed} />
             <PrivateRoute path="/stuff" exact component={MyStuff} authed={authed} />
+            <PrivateRoute path="/stuff/12345/edit" exact component={Edit} authed={authed} />
+            <PrivateRoute path="/stuff/12345" exact component={SingleStuff} authed={authed} />
           </Switch>
         </Router>        
       </div>
